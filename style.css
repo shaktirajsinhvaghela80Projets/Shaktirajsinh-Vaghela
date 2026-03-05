@@ -162,22 +162,6 @@ color:#e5e7eb;
 
 }
 
-.project-img{
-
-width:100%;
-
-max-width:900px;
-
-margin-top:15px;
-
-border-radius:12px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.35);
-
-transition:transform 0.3s ease;
-
-}
-
 .project-img:hover{
 
 transform:scale(1.02);
@@ -267,3 +251,4 @@ height:500px;
 }
 
 }
+
