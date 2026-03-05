@@ -226,29 +226,23 @@ transform:translateY(0);
 
 }
 
-/* Tableau Dashboard Embed */
-
 .tableau-container{
-margin-top:20px;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  margin-top:25px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,0.45);
 }
 
 .tableau-container iframe{
-width:100%;
-height:600px;
-border:none;
-border-radius:12px;
+  width:100%;
+  height:700px;
+  border:none;
+  border-radius:12px;
 }
 
 @media (max-width:768px){
-
-.tableau-container iframe{
-
-height:500px;
-
-}
-
+  .tableau-container iframe{
+    height:500px;
+  }
 }
 
