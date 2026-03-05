@@ -1,260 +1,192 @@
+/* Reset */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
+/* Body & Background */
 body{
-
-font-family:'Poppins',sans-serif;
-
-background:url('background.jpg');
-
-background-size:cover;
-
-background-position:center;
-
-background-attachment:fixed;
-
-color:white;
-
+  font-family:'Poppins',sans-serif;
+  background:url('background.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:white;
+  scroll-behavior:smooth; /* smooth scroll for sliding effect */
 }
 
+/* Blurred Overlay */
 .overlay{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-backdrop-filter:blur(8px);
-
-background:rgba(0,0,0,0.35);
-
-z-index:-1;
-
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,0.35);
+  z-index:-1;
 }
 
+/* Hero Section */
 .hero{
-
-text-align:center;
-
-padding:120px 20px;
-
+  text-align:center;
+  padding:0;
+  height:100vh; /* full viewport height */
+  display:flex;
+  flex-direction:column;
+  justify-content:center; /* vertically center */
+  align-items:center;
+  position:relative;
 }
 
+/* Sticky Name */
 .name{
-
-font-size:clamp(40px,6vw,70px);
-
-font-weight:600;
-
-letter-spacing:2px;
-
+  font-size:clamp(40px,6vw,70px);
+  font-weight:800;
+  letter-spacing:2px;
+  position:sticky;
+  top:20px; /* sticks 20px from top when scrolling */
+  background:rgba(0,0,0,0.2); /* optional, slight background for readability */
+  padding:5px 10px;
+  border-radius:8px;
+  z-index:1000;
 }
 
+/* Subtitle */
 .subtitle{
-
-margin-top:10px;
-
-font-size:18px;
-
-color:#d1d5db;
-
+  margin-top:10px;
+  font-size:18px;
+  color:#d1d5db;
 }
 
+/* Social Links */
 .social{
-
-margin-top:20px;
-
+  margin-top:20px;
 }
 
 .social a{
-
-margin:0 15px;
-
-text-decoration:none;
-
-color:#a5f3fc;
-
-font-weight:500;
-
-transition:0.3s;
-
+  margin:0 15px;
+  text-decoration:none;
+  color:#a5f3fc;
+  font-weight:500;
+  transition:0.3s;
 }
 
 .social a:hover{
-
-color:white;
-
+  color:white;
 }
 
+/* Sections */
 .section{
-
-padding:70px 12%;
-
+  padding:70px 12%;
+  min-height:50vh;
 }
 
 .section-title{
-
-font-size:30px;
-
-margin-bottom:25px;
-
-font-weight:600;
-
+  font-size:30px;
+  margin-bottom:25px;
+  font-weight:600;
 }
 
 .sub-title{
-
-font-size:22px;
-
-margin-bottom:20px;
-
-font-weight:600;
-
-font-style:italic;
-
+  font-size:22px;
+  margin-bottom:20px;
+  font-weight:600;
+  font-style:italic;
 }
 
+/* Project Cards */
 .project-card{
-
-background:rgba(255,255,255,0.08);
-
-padding:30px;
-
-border-radius:15px;
-
-backdrop-filter:blur(10px);
-
-margin-bottom:30px;
-
-transition:0.4s;
-
+  background:rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  margin-bottom:30px;
+  transition:0.4s;
 }
 
 .project-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 15px 40px rgba(0,0,0,0.4);
-
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.4);
 }
 
 .project-card h4{
-
-margin-bottom:10px;
-
-font-size:20px;
-
+  margin-bottom:10px;
+  font-size:20px;
 }
 
 .project-card p{
-
-line-height:1.6;
-
-color:#e5e7eb;
-
+  line-height:1.6;
+  color:#e5e7eb;
 }
 
-.project-img:hover{
-
-transform:scale(1.02);
-
-}
-
-.btn{
-
-display:inline-block;
-
-margin-top:15px;
-
-padding:10px 18px;
-
-background:#22d3ee;
-
-color:black;
-
-border-radius:6px;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:0.3s;
-
-}
-
-.btn:hover{
-
-background:#06b6d4;
-
-}
-
-footer{
-
-text-align:center;
-
-padding:40px;
-
-color:#cbd5f5;
-
-}
-
-/* slide animation */
-
-.slide{
-
-opacity:0;
-
-transform:translateY(60px);
-
-transition:all 1s ease;
-
-}
-
-.slide.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
+/* Tableau Screenshot Image Styling */
 .project-img {
-  width: 100%;                 /* full width inside project card */
-  max-width: 1000px;           /* optional: max width for large screens */
-  border-radius: 15px;          /* matches glass-style cards */
-  box-shadow: 0 15px 40px rgba(0,0,0,0.45);  /* soft shadow for depth */
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 15px;             /* space from text */
-  cursor: pointer;              /* looks clickable */
+  margin-top: 15px;
+  cursor: pointer;
   display: block;
 }
 
-/* Hover effect: subtle zoom & glow to indicate interactivity */
+/* Hover effect */
 .project-img:hover {
-  transform: scale(1.02);       /* slight zoom on hover */
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);   /* stronger shadow */
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
-/* Optional: make it responsive for smaller screens */
+/* Button */
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#22d3ee;
+  color:black;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#06b6d4;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#cbd5f5;
+}
+
+/* Slide animation */
+.slide{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1s ease;
+}
+
+.slide.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Responsive */
 @media (max-width:768px){
   .project-img{
-    height: auto;               /* maintain aspect ratio */
-    border-radius: 12px;        /* slightly smaller radius on mobile */
+    height:auto;
+    border-radius:12px;
   }
 }
 
-@media (max-width:768px){
-  .tableau-container iframe{
-    height:500px;
-  }
+/* Optional: Tableau container styling */
+.tableau-container{
+  margin-top:25px;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,0.45);
 }
-
-
