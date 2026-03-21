@@ -97,7 +97,11 @@ body {
     line-height: 1.6;
     color: #e5e7eb;
 }
-
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 .btn {
     display: inline-block;
     margin-top: 15px;
