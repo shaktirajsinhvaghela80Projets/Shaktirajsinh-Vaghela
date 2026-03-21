@@ -1,23 +1,17 @@
 const sections = document.querySelectorAll('.slide');
 
-function reveal(){
+function reveal() {
+    sections.forEach(section => {
 
-sections.forEach(section => {
+        const windowHeight = window.innerHeight;
+        const revealTop = section.getBoundingClientRect().top;
+        const revealPoint = 120;
 
-const windowHeight = window.innerHeight;
+        if (revealTop < windowHeight - revealPoint) {
+            section.classList.add('show');
+        }
 
-const revealTop = section.getBoundingClientRect().top;
-
-const revealPoint = 120;
-
-if(revealTop < windowHeight - revealPoint){
-
-section.classList.add('show');
-
-}
-
-});
-
+    });
 }
 
 window.addEventListener('scroll', reveal);
